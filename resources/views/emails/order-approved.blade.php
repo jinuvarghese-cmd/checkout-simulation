@@ -30,6 +30,7 @@
                 <div style="margin-top: 1rem;">
                     @foreach($order->items as $item)
                         <div style="display: flex; align-items: flex-start; border-bottom: 1px solid #e5e7eb; padding-bottom: 1rem; margin-bottom: 1rem;">
+                            <img src="{{ $item->product->image_url }}" alt="{{ $item->product->name }}" style="width: 64px; height: 64px; object-fit: cover; border-radius: 0.375rem; margin-right: 1rem; flex-shrink: 0;">
                             <div style="flex: 1;">
                                 <h3 style="font-weight: 500; color: #111827;">{{ $item->product->name }}</h3>
                                 

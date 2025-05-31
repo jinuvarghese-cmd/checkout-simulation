@@ -15,7 +15,8 @@ class ProductsTableSeeder extends Seeder
             'name' => 'Converse Chuck Taylor All Star II Hi',
             'description' => 'The Converse Chuck Taylor All Star II Hi features a premium canvas upper, Lunarlon sockliner for cushioning, and a micro-suede lining for comfort.',
             'price' => 75.00,
-            'image_url' => 'https://example.com/converse.jpg',
+            'inventory' =>150,
+            'image_url' => 'https://www.converse.in/media/catalog/product/m/9/m9160_a_107x1.jpg?optimize=medium&bg-color=255%2C255%2C255&fit=cover&height=900&width=900&format=webp',
         ]);
 
         // Color variants

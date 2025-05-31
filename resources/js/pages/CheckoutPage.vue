@@ -212,29 +212,39 @@
                         <!-- Cart Items -->
                         <div class="space-y-4 mb-4">
                             <div v-for="(item, index) in cartStore.cart" :key="index" class="border-b border-gray-200 pb-4 last:border-b-0">
-                                <h3 class="text-lg font-medium text-gray-900 mb-2">{{ item.product.name }}</h3>
-                                
-                                <div class="space-y-1">
-                                    <div v-for="(value, name) in item.variantOptions" :key="name" class="flex justify-between text-sm">
-                                        <span class="text-gray-600">{{ name }}:</span>
-                                        <span class="text-gray-900">{{ value }}</span>
-                                    </div>
+                                <div class="flex items-start space-x-4">
+                                    <img 
+                                        :src="item.product.image_url" 
+                                        :alt="item.product.name"
+                                        class="w-16 h-16 object-cover rounded-md flex-shrink-0"
+                                    >
+                                <div class="flex-1">
+                                    <h3 class="text-lg font-medium text-gray-900 mb-2">{{ item.product.name }}</h3>
                                     
-                                    <div class="flex justify-between text-sm">
-                                        <span class="text-gray-600">Quantity:</span>
-                                        <span class="text-gray-900">{{ item.quantity }}</span>
-                                    </div>
-                                    
-                                    <div class="flex justify-between text-sm">
-                                        <span class="text-gray-600">Price:</span>
-                                        <span class="text-gray-900">${{ item.product.price }}</span>
-                                    </div>
-                                    
-                                    <div class="flex justify-between text-sm font-medium">
-                                        <span class="text-gray-900">Subtotal:</span>
-                                        <span class="text-gray-900">${{ (item.product.price * item.quantity).toFixed(2) }}</span>
+                                    <!-- Rest of your existing product details -->
+                                    <div class="space-y-1">
+                                        <div v-for="(value, name) in item.variantOptions" :key="name" class="flex justify-between text-sm">
+                                            <span class="text-gray-600">{{ name }}:</span>
+                                            <span class="text-gray-900">{{ value }}</span>
+                                        </div>
+                                        
+                                        <div class="flex justify-between text-sm">
+                                            <span class="text-gray-600">Quantity:</span>
+                                            <span class="text-gray-900">{{ item.quantity }}</span>
+                                        </div>
+                                        
+                                        <div class="flex justify-between text-sm">
+                                            <span class="text-gray-600">Price:</span>
+                                            <span class="text-gray-900">${{ item.product.price }}</span>
+                                        </div>
+                                        
+                                        <div class="flex justify-between text-sm font-medium">
+                                            <span class="text-gray-900">Subtotal:</span>
+                                            <span class="text-gray-900">${{ (item.product.price * item.quantity).toFixed(2) }}</span>
+                                        </div>
                                     </div>
                                 </div>
+                            </div>
                             </div>
                         </div>
                         
