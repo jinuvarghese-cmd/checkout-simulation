@@ -1,6 +1,6 @@
 # Order checkout simulation
 
-Allows you to view a proeduct, checkout and verify differnt order outcomes
+Allows you to view a product, checkout and verify differnt order outcomes
 
 ## Tech Stack
 
